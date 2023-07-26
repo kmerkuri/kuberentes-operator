@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - kmerkuri.kmerkuri.io
+  resources:
+  - fulldeployments
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - kmerkuri.kmerkuri.io
+  resources:
+  - fulldeployments/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - kmerkuri.kmerkuri.io
+  resources:
+  - fulldeployments/status
+  verbs:
+  - get
+  - patch
+  - update

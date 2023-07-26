@@ -1,0 +1,10 @@
+apiVersion: kmerkuri.kmerkuri.io/v1
+kind: Fulldeployment
+metadata:
+  name: client-sample-1
+spec:
+	ContainerImage: "kmerkuri/golang-client"
+	ContainerTag: "1.2.3"
+	ContainerEntrypoint: "/multi-tenant-app"
+	Appurl: "kmerkuri.io"
+	Databaseurl: "jdbc://localhost?Smthing"
